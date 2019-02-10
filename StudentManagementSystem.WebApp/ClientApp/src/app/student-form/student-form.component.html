@@ -1,0 +1,28 @@
+<div>
+    <!-- <div *ngFor="let student of students2">
+      <label>Name :&nbsp;{{student.name}}</label><br>
+      <label>Id :&nbsp;{{student.id}}</label><br>
+      <label>Address :&nbsp;{{student.Address}}</label><br>
+    </div> -->
+    <!-- <button (click)="getDetails2()" class="btn btn-primary">Click Me</button> -->
+    <div>
+      <form [formGroup]="studentForm">
+      <div class="row">
+        <div class="col-6">
+          Name :
+        </div>
+        <div class="col-6"><input type="text" formControlName="name"></div>
+        <div class="col-6">
+          Roll No :
+        </div>
+        <div class="col-6"><input type="text" formControlName="rollNo"></div>
+        <div class="col-6">
+          Address :
+        </div>
+        <div class="col-6"><input type="text" formControlName="address"></div>
+      </div>
+    </form>
+    <button (click)="saveStudentForm()" class="btn btn-primary">save</button>
+    </div>
+    </div>
+    {{studentForm.value|json}}
